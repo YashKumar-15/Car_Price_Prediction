@@ -29,7 +29,6 @@ name = st.sidebar.selectbox('Select Car', df['name'].unique())
 
 year = st.selectbox("Select a year", range(1991, 2025))
 
-# Display selected date
 st.markdown("Note: Select Year from 1991 to 2024")
 options = ['']
 fuel = st.sidebar.selectbox('Select Fuel Type', df['fuel'].unique())
@@ -48,7 +47,7 @@ max_power = st.slider('Select max_power', 2, 400,default_max_power_value)
 
 seats = st.slider('Select Seats', 2, 14, step=1)
 
-ml_model = st.radio('Select ML Model',['Linear Reagression','Decision Tree'])
+ml_model = st.radio('Select ML Model',['Linear Reagression'])
 if st.button('Predict'):
   df2=pd.DataFrame([[name, year, km_driven, fuel, seller_type, transmission,
        owner, mileage, engine, max_power, seats]], columns=['name', 'year', 'km_driven', 'fuel', 'seller_type', 'transmission',
@@ -69,7 +68,7 @@ if st.button('Predict'):
     lr_prediction = LR_model.predict(df2)
   #   st.write(df2)
     st.write('Hi Predicted Price of Car with Linear Regression is ',str(format(lr_prediction[0],'.2f')))
-  elif ml_model == 'Decision Tree':
-    dt_prediction = DT_model.predict(df2)
-  #   st.write(df2)
-    st.write('Hi Predicted Price of Car with Decision Tree is ',str(format(dt_prediction[0],'.2f')))
+  # elif ml_model == 'Decision Tree':
+  #   dt_prediction = DT_model.predict(df2)
+  # #   st.write(df2)
+  #   st.write('Hi Predicted Price of Car with Decision Tree is ',str(format(dt_prediction[0],'.2f')))
