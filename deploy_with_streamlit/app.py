@@ -40,8 +40,8 @@ default__engine_value = 2000
 engine = st.slider('Select engine', 620, 3600,default__engine_value)
 default_mileage_value = 12
 mileage = st.slider('Select mileage', 2, 42,default_mileage_value)
-default_km_driven_value = 70000
-km_driven = st.slider('Select km Travelled',5000, 2360000,default_km_driven_value)
+default_km_driven_value = 110
+km_driven = st.slider('Select km Travelled',100, 25000,default_km_driven_value)
 default_max_power_value = 250
 max_power = st.slider('Select max_power', 2, 400,default_max_power_value)
 
