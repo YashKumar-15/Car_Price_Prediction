@@ -32,7 +32,7 @@ name = st.sidebar.selectbox('Select Car', df['name'].unique())
 
 year = st.selectbox("Select a year", range(2013, 2025))
 
-st.markdown("Note: Select Year from 1991 to 2024")
+st.markdown("Note: Select Year from 2013 to 2024")
 options = ['']
 fuel = st.sidebar.selectbox('Select Fuel Type', df['fuel'].unique())
 seller_type = st.sidebar.selectbox('Select Seller Type', df['seller_type'].unique())
